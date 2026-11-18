@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+
+# Local checkout of the reference implementation (see scripts/make_fixtures.py)
+/trec_eval/
+repro-eval-web/*
