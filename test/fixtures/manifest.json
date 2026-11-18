@@ -1,0 +1,297 @@
+{
+ "generator": "scripts/make_fixtures.py",
+ "trec_eval": "trec_eval version 10.0-rc3",
+ "machine": "arm64",
+ "cases": [
+  {
+   "name": "corner-official",
+   "version": 10,
+   "args": [],
+   "qrels": "corner/qrels_in_run.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-official.txt.gz",
+   "full": "outputs/corner-official.full.txt.gz"
+  },
+  {
+   "name": "corner-q",
+   "version": 10,
+   "args": [
+    "-q",
+    "-m",
+    "all_trec"
+   ],
+   "qrels": "corner/qrels_in_run.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-q.txt.gz",
+   "full": "outputs/corner-q.full.txt.gz"
+  },
+  {
+   "name": "corner-qc",
+   "version": 10,
+   "args": [
+    "-q",
+    "-c",
+    "-m",
+    "all_trec"
+   ],
+   "qrels": "corner/qrels.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-qc.txt.gz",
+   "full": "outputs/corner-qc.full.txt.gz"
+  },
+  {
+   "name": "corner-qc-l2",
+   "version": 10,
+   "args": [
+    "-q",
+    "-c",
+    "-l2",
+    "-m",
+    "all_trec"
+   ],
+   "qrels": "corner/qrels.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-qc-l2.txt.gz",
+   "full": "outputs/corner-qc-l2.full.txt.gz"
+  },
+  {
+   "name": "corner-qc-M7",
+   "version": 10,
+   "args": [
+    "-q",
+    "-c",
+    "-M7",
+    "-m",
+    "all_trec"
+   ],
+   "qrels": "corner/qrels.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-qc-M7.txt.gz",
+   "full": "outputs/corner-qc-M7.full.txt.gz"
+  },
+  {
+   "name": "corner-qc-J",
+   "version": 10,
+   "args": [
+    "-q",
+    "-c",
+    "-J",
+    "-m",
+    "all_trec"
+   ],
+   "qrels": "corner/qrels.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-qc-J.txt.gz",
+   "full": "outputs/corner-qc-J.full.txt.gz"
+  },
+  {
+   "name": "corner-qc-cutoffs",
+   "version": 10,
+   "args": [
+    "-q",
+    "-c",
+    "-m",
+    "all_trec",
+    "-m",
+    "P.1,2,3,7,50,2000",
+    "-m",
+    "recall.1,2,3,7,50,2000",
+    "-m",
+    "ndcg_cut.1,2,3,7,50,2000",
+    "-m",
+    "map_cut.1,2,3,7,50,2000",
+    "-m",
+    "relative_P.1,2,3,7,50,2000",
+    "-m",
+    "success.1,2,3,7,50,2000",
+    "-m",
+    "unj.1,2,3,7,50,2000"
+   ],
+   "qrels": "corner/qrels.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-qc-cutoffs.txt.gz",
+   "full": "outputs/corner-qc-cutoffs.full.txt.gz"
+  },
+  {
+   "name": "corner-official-cutoffs",
+   "version": 10,
+   "args": [
+    "-m",
+    "official",
+    "-m",
+    "P.1,2,3,7,50,2000"
+   ],
+   "qrels": "corner/qrels_in_run.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-official-cutoffs.txt.gz",
+   "full": "outputs/corner-official-cutoffs.full.txt.gz"
+  },
+  {
+   "name": "corner-set",
+   "version": 10,
+   "args": [
+    "-c",
+    "-m",
+    "set"
+   ],
+   "qrels": "corner/qrels.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "stdout": "outputs/corner-set.txt.gz",
+   "full": "outputs/corner-set.full.txt.gz"
+  },
+  {
+   "name": "nist-official",
+   "version": 10,
+   "args": [],
+   "qrels": "nist/qrels.test",
+   "run": "nist/results.test",
+   "exit": 0,
+   "stdout": "outputs/nist-official.txt.gz",
+   "full": "outputs/nist-official.full.txt.gz"
+  },
+  {
+   "name": "nist-a",
+   "version": 10,
+   "args": [
+    "-m",
+    "all_trec"
+   ],
+   "qrels": "nist/qrels.test",
+   "run": "nist/results.test",
+   "exit": 0,
+   "stdout": "outputs/nist-a.txt.gz",
+   "full": "outputs/nist-a.full.txt.gz"
+  },
+  {
+   "name": "nist-aq",
+   "version": 10,
+   "args": [
+    "-m",
+    "all_trec",
+    "-q"
+   ],
+   "qrels": "nist/qrels.test",
+   "run": "nist/results.test",
+   "exit": 0,
+   "stdout": "outputs/nist-aq.txt.gz",
+   "full": "outputs/nist-aq.full.txt.gz"
+  },
+  {
+   "name": "nist-aqc",
+   "version": 10,
+   "args": [
+    "-m",
+    "all_trec",
+    "-q",
+    "-c"
+   ],
+   "qrels": "nist/qrels.test",
+   "run": "nist/results.trunc",
+   "exit": 0,
+   "stdout": "outputs/nist-aqc.txt.gz",
+   "full": "outputs/nist-aqc.full.txt.gz"
+  },
+  {
+   "name": "nist-aqcM",
+   "version": 10,
+   "args": [
+    "-m",
+    "all_trec",
+    "-q",
+    "-c",
+    "-M100"
+   ],
+   "qrels": "nist/qrels.test",
+   "run": "nist/results.trunc",
+   "exit": 0,
+   "stdout": "outputs/nist-aqcM.txt.gz",
+   "full": "outputs/nist-aqcM.full.txt.gz"
+  },
+  {
+   "name": "nist-aql",
+   "version": 10,
+   "args": [
+    "-m",
+    "all_trec",
+    "-q",
+    "-l2"
+   ],
+   "qrels": "nist/qrels.rel_level",
+   "run": "nist/results.test",
+   "exit": 0,
+   "stdout": "outputs/nist-aql.txt.gz",
+   "full": "outputs/nist-aql.full.txt.gz"
+  },
+  {
+   "name": "dup",
+   "version": 10,
+   "args": [
+    "-q",
+    "-m",
+    "all_trec"
+   ],
+   "qrels": "dup/qrels.txt",
+   "run": "dup/run.txt",
+   "exit": 4,
+   "stderr": "trec_eval.form_res_qrels: duplicate docs dtrec_eval: Can't calculate measure 'num_ret'"
+  },
+  {
+   "name": "dup-M3",
+   "version": 10,
+   "args": [
+    "-q",
+    "-M3",
+    "-m",
+    "all_trec"
+   ],
+   "qrels": "dup/qrels.txt",
+   "run": "dup/run.txt",
+   "exit": 0,
+   "stdout": "outputs/dup-M3.txt.gz",
+   "full": "outputs/dup-M3.full.txt.gz"
+  },
+  {
+   "name": "corner-v9",
+   "version": 9,
+   "rounding": "v9",
+   "trec_eval": "trec_eval version 9.0.7",
+   "args": [
+    "-q",
+    "-m",
+    "iprec_at_recall",
+    "-m",
+    "11pt_avg"
+   ],
+   "qrels": "corner/qrels_in_run.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "full": "outputs/corner-v9.full.txt.gz"
+  },
+  {
+   "name": "corner-v9-fma",
+   "version": 9,
+   "rounding": "v9-fma",
+   "trec_eval": "trec_eval version 9.0.7",
+   "args": [
+    "-q",
+    "-m",
+    "iprec_at_recall",
+    "-m",
+    "11pt_avg"
+   ],
+   "qrels": "corner/qrels_in_run.txt",
+   "run": "corner/run.txt",
+   "exit": 0,
+   "full": "outputs/corner-v9-fma.full.txt.gz"
+  }
+ ]
+}
